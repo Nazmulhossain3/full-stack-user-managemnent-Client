@@ -1,8 +1,10 @@
+import AllUsers from "./Users/AllUsers";
 
 const Home = () => {
     return (
         <div>
-            <h2>this is home</h2>
+            <AllUsers></AllUsers>
+         
         </div>
     );
 };

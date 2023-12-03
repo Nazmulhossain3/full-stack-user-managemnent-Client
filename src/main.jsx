@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import Main from './LayOut/Main/Main.jsx';
 import Home from './Pages/Home/Home.jsx';
+import AddUser from './Pages/AddUser/AddUser.jsx';
+import Team from './Pages/MyTeam/Team.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -15,7 +18,16 @@ const router = createBrowserRouter([
     children : [
       {
         path : '/',
-        element : <Home></Home>
+        element : <Home></Home>,
+        loader : ()=> fetch('https://full-stack-user-management-server.vercel.app/user-route/getUserCount')
+      },
+      {
+        path : '/addUser',
+        element : <AddUser></AddUser>
+      },
+      {
+        path :'/myteam',
+        element : <Team></Team>
       }
     
     
