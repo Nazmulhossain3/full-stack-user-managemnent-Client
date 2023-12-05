@@ -21,7 +21,7 @@ const UserTableCard = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/user-route/deleteUser/${id}`, {
+        fetch(`https://full-stack-user-management-server-r8sammynr-nazmulhossain3.vercel.app/user-route/deleteUser/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

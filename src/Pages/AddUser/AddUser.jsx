@@ -25,7 +25,7 @@ const AddUser = () => {
         }
 console.log(user)
 
-        fetch('http://localhost:3000/user-route/createUser',{
+        fetch('https://full-stack-user-management-server-r8sammynr-nazmulhossain3.vercel.app/user-route/createUser',{
           method : 'POST',
           headers : {
             "content-type" : "application/json"

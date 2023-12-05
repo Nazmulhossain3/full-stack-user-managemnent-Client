@@ -23,7 +23,7 @@ const UpdateUser = () => {
         }
         console.log('update use', upateUser)
 
-        fetch(`http://localhost:3000/user-route/updateUser/${id}`,{
+        fetch(`https://full-stack-user-management-server-r8sammynr-nazmulhossain3.vercel.app/user-route/updateUser/${id}`,{
             method : 'PUT',
             headers : {
                 "Content-type" : 'application/json'
