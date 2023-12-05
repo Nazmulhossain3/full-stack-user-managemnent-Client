@@ -63,7 +63,9 @@ const AllUsers = () => {
       <UserFilter allUser={allUser} setFilterUser={setFilterUser}></UserFilter>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-12 gap-y-6">
-        {filterUser.map((user, index) => (
+        {filterUser.filter((user)=>{
+          return userSearch.toLocaleLowerCase() === '' ? user : user.first_name.toLocaleLowerCase().includes(userSearch)
+        }).map((user, index) => (
             <AllUsersCard key={index} user={user}></AllUsersCard>
           ))}
       </div>
