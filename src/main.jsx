@@ -11,6 +11,7 @@ import AddUser from './Pages/AddUser/AddUser.jsx';
 import Team from './Pages/MyTeam/Team.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import UsersTable from './Pages/UsersTable.jsx/UsersTable.jsx';
+import UpdateUser from './Pages/UpdateUser.jsx/UpdateUser.jsx';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path : '/usersTable',
         element : <UsersTable></UsersTable>
+      },
+      {
+        path : "/update/:id",
+        element : <UpdateUser></UpdateUser>
       }
     
     
