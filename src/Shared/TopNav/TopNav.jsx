@@ -18,14 +18,14 @@ const TopNav = () => {
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/addUser'>AddUser</NavLink>
             <NavLink to='/myteam'>My Team</NavLink>
+            <NavLink to='/usersTable'>Users Table</NavLink>
           </Navbar.Container>
           <Navbar.Collapse collapseType="sidebar">
             <Navbar.Container tag="ul" className="flex flex-col gap-5">
-              <Navbar.Link linkName="Home" />
-              <Navbar.Link linkName="Projects" />
-              <Navbar.Link linkName="Blogs" />
-              <Navbar.Link linkName="News" />
-              <Navbar.Link linkName="Resources" />
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/addUser'>AddUser</NavLink>
+            <NavLink to='/myteam'>My Team</NavLink>
+            <NavLink to='/usersTable'>Users Table</NavLink>
             </Navbar.Container>
           </Navbar.Collapse>
         </Navbar.Container>

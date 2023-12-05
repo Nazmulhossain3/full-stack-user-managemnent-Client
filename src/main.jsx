@@ -9,6 +9,10 @@ import Main from './LayOut/Main/Main.jsx';
 import Home from './Pages/Home/Home.jsx';
 import AddUser from './Pages/AddUser/AddUser.jsx';
 import Team from './Pages/MyTeam/Team.jsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import UsersTable from './Pages/UsersTable.jsx/UsersTable.jsx';
+
+const queryClient = new QueryClient();
 
 
 const router = createBrowserRouter([
@@ -28,6 +32,10 @@ const router = createBrowserRouter([
       {
         path :'/myteam',
         element : <Team></Team>
+      },
+      {
+        path : '/usersTable',
+        element : <UsersTable></UsersTable>
       }
     
     
@@ -37,6 +45,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+   <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        </QueryClientProvider>
   </React.StrictMode>,
 )

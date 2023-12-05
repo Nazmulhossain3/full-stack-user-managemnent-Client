@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TeamCard from "../../LayOut/Main/Cards/TeamCard";
+import TeamCard from "../../Cards/TeamCard";
 
 const Team = () => {
     const [teams,setTeams] = useState([])

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AllUsersCard from "../../../LayOut/Main/Cards/AllUsersCard";
+import AllUsersCard from "../../../Cards/AllUsersCard";
 import UserFilter from "./UserFilter";
 
 const AllUsers = () => {
@@ -42,12 +42,12 @@ const AllUsers = () => {
     <div>
       {/* here is user search functionlity using their name */}
 
-      <div className="join lg:py-24 px-20cd  ">
+      <div className="join lg:py-24  pb-12  ">
         <div>
           <div >
             <input
               onChange={(e) => setUserSearch(e.target.value)}
-              className="input input-bordered join-item "
+              className="input input-bordered join-item lg:ml-60 md:ml-20  "
               placeholder="Search User Name"
             />
           </div>

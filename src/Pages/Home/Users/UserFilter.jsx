@@ -45,7 +45,7 @@ const UserFilter = ({ allUser, setFilterUser }) => {
   
 
   return (
-    <div className="flex flex-row items-center justify-end gap-12 px-32  ">
+    <div className="flex flex-col md:flex-row lg:flex-row items-center md:justify-center lg:justify-end gap-12 lg:px-32  ">
       <select
         onChange={(e) => setSelectedDomain(e.target.value)}
         className=" bg-gray-100 py-3 px-4"
