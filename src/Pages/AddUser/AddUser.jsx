@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 const AddUser = () => {
 
@@ -23,6 +24,27 @@ const AddUser = () => {
             available
         }
 console.log(user)
+
+        fetch('http://localhost:3000/user-route/createUser',{
+          method : 'POST',
+          headers : {
+            "content-type" : "application/json"
+          },
+          body : JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          if(data){
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Great! Users is added",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        })
 
     }
 
